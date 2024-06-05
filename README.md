@@ -12,6 +12,7 @@
 
 ## Теоретическая часть (файл raw.sql в корне)
 
+```sql
 -- Создание таблиц
 CREATE TABLE IF NOT EXISTS short_names (
     name TEXT PRIMARY KEY,
@@ -85,3 +86,5 @@ SET status = (
 SELECT *
 FROM short_names s
 LEFT JOIN full_names f ON s.name = substring(f.name, 1, length(f.name) - 4);
+
+```
