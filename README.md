@@ -3,6 +3,7 @@
 ### Запуск
 
 `docker volume create --name=redis_data`
+
 `docker network create --driver=bridge --subnet=172.100.0.0/16 fastapi_redis_network`
 
 `cd  ./manage`
