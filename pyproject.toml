@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "fastapi-redis-docker"
+version = "0.1"
+description = ""
+authors = ["Volodya Petrov <awakened.volodya@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.111.0"
+pydantic-settings = "^2.3.0"
+logrich = "^1.0.6"
+redis = "^5.0.4"
+requests = "^2.32.3"
+loguru = "^0.7.2"
+pre-commit = "^3.7.1"
+autoflake = "^2.3.1"
+isort = "^5.13.2"
+black = "^24.4.2"
+flake8 = "^7.0.0"
+
+
+[tool.black]
+line-length = 119
+include = '\.pyi?$'
+target-version = ['py311']
+quiet = true
+fast = true
+
+[tool.isort]
+profile = "black"
+line_length = 119
+multi_line_output = 3
+src_paths = [".",]
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+allow_subclassing_any = true
+allow_untyped_calls = true
+pretty = true
+show_error_codes = true
+implicit_reexport = true
+allow_untyped_decorators = true
+warn_unused_ignores = false
+warn_return_any = false
+namespace_packages = true
+plugins = ["sqlalchemy.ext.mypy.plugin"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+venv = ".venv"
+venvPath = "./"
+exclude = [
+    "**/__pycache__",
+    ".git",
+    ".venv",
+]
+workspaceFolder = true

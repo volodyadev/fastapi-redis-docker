@@ -1,0 +1,19 @@
+[flake8]
+ignore = E211, E999, F401, F821, W503, F811, W391, E501, E126, F541, E712, E303
+max-doc-length = 119
+max-line-length = 119
+
+exclude =
+  ./.cache,
+  ./.git,
+  ./.idea,
+  ./.mypy_cache,
+  ./.pytest_cache,
+  ./.venv,
+  ./venv,
+  ./env,
+  ./cached_venv,
+  ./.vscode,
+  *migrations*,
+  **/temp/
+  temp/
