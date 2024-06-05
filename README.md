@@ -7,6 +7,7 @@
 `docker network create --driver=bridge --subnet=172.100.0.0/16 fastapi_redis_network`
 
 `cd  ./manage`
+
 `./start.sh --dev`
 
 ## Теоретическая часть (файл raw.sql в корне)
